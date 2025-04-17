@@ -16,7 +16,7 @@ dds$celltype <- relevel(dds$celltype, ref = "S2")
 #################################################################
 ########## WALD formatting: retain the terms to test ############
 #################################################################
-design(dds) <- ~ genotype
+design(dds) <- ~ celltype
 dds <- DESeq(dds)
 resultsNames(dds)
 
